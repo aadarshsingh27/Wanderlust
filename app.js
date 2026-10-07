@@ -70,9 +70,9 @@ const sessionOptions = {
 };
 
 //root
-// app.get("/", (req, res) => {
-//   res.send("Hii I am root!");
-// });
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 
 
 app.use(session(sessionOptions));

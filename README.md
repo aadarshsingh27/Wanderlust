@@ -1,5 +1,7 @@
 # 🧭 Wanderlust - Full Stack Airbnb Clone
 
+🚀 **Live Demo**: [https://wanderlust-dn4w.onrender.com](https://wanderlust-dn4w.onrender.com)
+
 Wanderlust is a full-stack web application inspired by Airbnb. It enables users to explore, search, and book unique accommodations around the world, as well as host their own properties. The project features full CRUD operations, image uploads via Cloudinary, geolocation and interactive mapping using Mapbox, category filtering, search functionality, user authentication/authorization, and a review rating system.
 
 ---
@@ -92,7 +94,7 @@ MAP_TOKEN=your_mapbox_public_access_token
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/Wanderlust.git
+   git clone https://github.com/aadarshsingh27/Wanderlust.git
    cd Wanderlust
    ```
 

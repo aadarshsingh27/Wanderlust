@@ -33,7 +33,7 @@ Wanderlust is a full-stack web application inspired by Airbnb. It enables users 
 ## 📁 Project Structure
 
 ```text
-Major_project/
+Wanderlust/
 ├── cloudConfig.js         # Cloudinary configuration & Multer storage setup
 ├── app.js                 # Express server entry point & core middleware
 ├── schema.js              # Joi validation schemas for listings & reviews
@@ -93,7 +93,7 @@ MAP_TOKEN=your_mapbox_public_access_token
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/your-username/Wanderlust.git
-   cd Major_project
+   cd Wanderlust
    ```
 
 2. **Install dependencies**:

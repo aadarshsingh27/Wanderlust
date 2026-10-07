@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <!-- Top Row of Navbar -->
+    <div class="d-flex align-items-center justify-content-between w-100">
+      <!-- Left: Logo & Explore -->
+      <div class="d-flex align-items-center me-3">
+        <a class="navbar-brand me-3" href="/listings"><i class="fa-regular fa-compass"></i></a>
+        <a class="nav-link d-none d-md-inline" href="/listings">Explore</a>
+      </div>
+
+      <!-- Center: Search Bar (Centered on all screen sizes) -->
+      <div class="search-container mx-auto">
+        <form class="d-flex" role="search" action="/listings" method="GET">
+          <input class="form-control me-2 search-inp" type="search" name="q" placeholder="Search destinations" value="<%= typeof q !== 'undefined' && q ? q : (locals.q || '') %>"/>
+          <button class="btn search-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i><span class="search-btn-text">Search</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Right: Desktop Links & Mobile Toggler -->
+      <div class="d-flex align-items-center ms-3">
+        <!-- Desktop Nav Links -->
+        <div class="d-none d-md-flex align-items-center text-nowrap gap-3">
+          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+          <% if(!currUser) { %>
+          <a class="nav-link" aria-current="page" href="/signup"><b>Sign up</b></a>
+          <a class="nav-link" href="/login"><b>Log in</b></a>
+          <% } %> <% if(currUser) { %>
+          <a class="nav-link" href="/logout"><b>Log out</b></a>
+          <% } %>
+        </div>
+
+        <!-- Mobile Toggler Button (Visible on mobile < md only, fixed at right corner) -->
+        <button class="navbar-toggler ms-2 d-md-none" 
+          type="button" 
+          data-bs-toggle="collapse"
+          data-bs-target="#mobileNavbarNav"
+          aria-controls="mobileNavbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Collapsible Menu (Only shown on mobile < md when toggled) -->
+    <div class="collapse w-100 d-md-none" id="mobileNavbarNav">
+      <div class="navbar-nav text-center py-2 border-top mt-2">
+        <a class="nav-link py-2" href="/listings">Explore</a>
+        <a class="nav-link py-2" href="/listings/new">Airbnb your home</a>
+        <% if(!currUser) { %>
+        <a class="nav-link py-2" aria-current="page" href="/signup"><b>Sign up</b></a>
+        <a class="nav-link py-2" href="/login"><b>Log in</b></a>
+        <% } %> <% if(currUser) { %>
+        <a class="nav-link py-2" href="/logout"><b>Log out</b></a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
